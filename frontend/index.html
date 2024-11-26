@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Sphere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Blog Sphere</h1>
+
+    <!-- Create Post Form -->
+    <div class="form">
+        <h2>Create Post</h2>
+        <input type="text" id="title" placeholder="Enter Post Title">
+        <textarea id="content" rows="5" placeholder="Enter Post Content"></textarea>
+        <button onclick="createPost()">Create Post</button>
+    </div>
+
+    <!-- Update Post Form -->
+    <div class="form update-form" id="updateForm" style="display: none;">
+        <h2>Update Post</h2>
+        <input type="text" id="updateTitle" placeholder="Enter New Title">
+        <textarea id="updateContent" rows="5" placeholder="Enter New Content"></textarea>
+        <button onclick="updatePost()">Update Post</button>
+        <button onclick="cancelUpdate()">Cancel</button>
+    </div>
+
+    <!-- Posts Display -->
+    <div id="posts"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
