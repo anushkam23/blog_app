@@ -1,12 +1,15 @@
+// Load environment variables from the .env file
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;  // Use a PORT from environment variables or default to 3000
 
-// MongoDB URI (Make sure to replace with the correct credentials)
-const MONGO_URI = "mongodb+srv://anushkam254:7449oqYFmeq4kqnG@cluster0.brxpn.mongodb.net/blogsDB?retryWrites=true&w=majority";
+// MongoDB URI from environment variables
+const MONGO_URI = process.env.MONGODB_URI;  // Read the MongoDB URI from the .env file
 
 // Middleware
 app.use(cors());
